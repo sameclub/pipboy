@@ -161,6 +161,10 @@ Windows 上首次构建前要先启用长路径，否则工具链解压会失败
 New-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem" -Name LongPathsEnabled -Value 1 -PropertyType DWORD -Force
 ```
 
+要在 PowerShell 或 cmd 里跑 PlatformIO，不要用 Git Bash / MSYS。平台用
+`idf_tools.py` 安装编译器，该脚本拒绝在 MSys/Mingw 下运行，结果是编译时报
+`xtensa-esp32s3-elf-g++` 找不到。
+
 重新生成素材和预览图（需要 Pillow，并先跑一次 `pio run` 把字库拉下来）：
 
 ```bash
