@@ -1,0 +1,6 @@
+# Optional battery calibration. Copy as /pipboy.ini on the TF card.
+# voltage = ADC millivolts * 4 / 1000 * battery_scale
+# new scale = old scale * multimeter voltage / displayed voltage
+# Accepted range: 0.8 .. 1.2. Reload with A on SYS > BATTERY.
+# Wi-Fi is configured from your phone, not this file.
+battery_scale=1.0000

@@ -1,0 +1,16 @@
+.pio/
+__pycache__/
+*.py[cod]
+
+# Local-only PlatformIO overrides and notes
+platformio.local.ini
+README.local.md
+
+# Build output: ship the firmware image and its checksums, nothing else
+dist/*
+!dist/*.bin
+!dist/manifest.json
+!dist/SHA256SUMS.txt
+!dist/esp-wifi-connect-MIT.txt
+
+pipboy.ini

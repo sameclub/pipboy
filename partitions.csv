@@ -1,0 +1,4 @@
+# Build-time layout only. Distribute firmware.bin alone; Launcher chooses its runtime slot.
+nvs,data,nvs,0x9000,0x5000,
+otadata,data,ota,0xe000,0x2000,
+pipboy,app,ota_0,0x10000,0x300000,
