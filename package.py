@@ -27,19 +27,8 @@ manifest = {
     "name": "PipBoy", "version": VERSION,
     "file": target.name, "bytes": len(data), "sha256": digest,
     "chip": "ESP32-S3", "flash_mb": 16, "psram_mb": 8,
-    "format": "application-only", "build": "passed", "hardware_validation": "pending",
-    "launcher_return": "current test partition boot unsupported; adaptation pending",
-    "animation": "4 user-supplied walk frames at 160 ms/frame",
-    "animation_source": "user-provided frame_00.png..frame_03.png",
-    "clock": "NTP, UTC+8; unknown time shown as --:--",
-    "ui": "STAT/DATA/RADIO/SYS; bitmap clock, date, mascot, battery and Wi-Fi; list-based submenus",
-    "navigation": "left/right or SELECT: page; up/down: select; A: open/run; B: back; START: Wi-Fi setup",
-    "battery": "GPIO8 calibrated ADC mV x4 x user scale; estimated percentage",
-    "wifi": "phone SoftAP provisioning, own NVS namespace, status and scan",
-    "bluetooth": "passive BLE scan; no pairing or Classic Bluetooth",
-    "screen_sleep": "APP GPIO10 light-sleep and wake; RTC time retained; radios paused",
-    "auto_sleep": "10 seconds without interaction; deferred during provisioning, scans, and file operations",
+    "format": "application-only",
 }
 (out / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
-shutil.copyfile(root / "lib/wifi-portal/LICENSE", out / "esp-wifi-connect-MIT.txt")
+shutil.copyfile(root / "lib/wifi-portal/LICENSE", out / "wifi-portal-MIT.txt")
 print(json.dumps(manifest, indent=2))

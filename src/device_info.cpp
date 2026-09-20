@@ -29,7 +29,6 @@ String bleState = "RADIO OFF";
 struct BleEntry { String name, address; int rssi; };
 BleEntry bleEntries[MAX_BLE_RESULTS];
 bool bleTruncated = false;
-bool restorePortal = false;
 
 String mac(esp_mac_type_t type) {
     uint8_t bytes[6];
@@ -200,7 +199,6 @@ bool deviceInfoBack(InfoSection section) {
 }
 
 void deviceInfoAction(InfoSection section, int key, bool cardMounted) {
-    if (key == KEY_B) { deviceInfoBack(section); return; }
     if (section == INFO_WIFI && key == KEY_X && !wifiResults && !wifiBusy && !bleBusy.load()) {
         toggleProvisioning();
         return;
@@ -327,8 +325,6 @@ void deviceInfoRows(InfoSection section, String (&rows)[6], String &hint) {
 bool deviceInfoCanSleep() { return !wifiBusy && !bleBusy.load() && !wifiPortal.isProvisioning(); }
 
 bool suspendDeviceInfo() {
-    restorePortal = wifiPortal.isProvisioning();
-    if (restorePortal) wifiPortal.stopProvisioning();
     WiFi.setAutoReconnect(false);
     bool wifiStopped = WiFi.mode(WIFI_OFF);
     if (bleReady.load()) {
@@ -343,6 +339,5 @@ void resumeDeviceInfo() {
     wasConnected = false;
     lastPoll = millis() - 250;
     lastSample = millis() - 2000;
-    if (restorePortal) wifiPortal.startProvisioning();
     // WifiPortal handles reconnection internally via update().
 }

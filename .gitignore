@@ -11,6 +11,6 @@ dist/*
 !dist/*.bin
 !dist/manifest.json
 !dist/SHA256SUMS.txt
-!dist/esp-wifi-connect-MIT.txt
+!dist/wifi-portal-MIT.txt
 
 pipboy.ini
