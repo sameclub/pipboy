@@ -61,7 +61,7 @@
 镜像是**纯应用镜像**，用 Launcher 的 TF 卡文件浏览器安装。不能写到 Flash `0x0`，
 也不要安装 `.pio` 里的 `firmware.factory.bin`、`partitions.bin` 或 `bootloader.bin`。
 
-1. 把 `dist/PipBoy-v1.3.bin` 复制到 TF 卡任意位置。
+1. 把 `dist/PipBoy-v1.4.bin` 复制到 TF 卡任意位置。
 2. 在 Launcher 文件浏览器里选中它，Launcher 会分配 Flash 应用分区并重启运行。
 
 本项目的 `partitions.csv` 只服务编译，实际安装位置由 Launcher 决定。

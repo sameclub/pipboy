@@ -72,7 +72,7 @@ The image is **application-only**. Install it with the Launcher SD file
 browser; do not write it to flash offset `0x0`, and do not install
 `firmware.factory.bin`, `partitions.bin` or `bootloader.bin` from `.pio`.
 
-1. Copy `dist/PipBoy-v1.3.bin` anywhere on the TF card.
+1. Copy `dist/PipBoy-v1.4.bin` anywhere on the TF card.
 2. Pick it in the Launcher file browser. Launcher allocates the flash app
    partition and reboots into it.
 
