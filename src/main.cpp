@@ -349,7 +349,7 @@ void setup() {
     if (previousFrame) memset(previousFrame,0xff,240*240*2);
     screen.setTextWrap(false); digitalWrite(9,HIGH);
     delay(400);
-    Serial.println("PIPBOY v1.4 BOOT; no UART0; USB Serial/JTAG");
+    Serial.println("PIPBOY v1.5 BOOT; no UART0; USB Serial/JTAG");
     const esp_partition_t *p=esp_ota_get_running_partition();
     Serial.printf("RUNNING label=%s offset=0x%08lx size=0x%08lx display=%s\n",p->label,(unsigned long)p->address,(unsigned long)p->size,displayOK?"INIT OK":"FAIL");
     mountCard(); beginDeviceInfo(sdOK);

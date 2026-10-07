@@ -322,7 +322,7 @@ void deviceInfoRows(InfoSection section, String (&rows)[6], String &hint) {
     }
 }
 
-bool deviceInfoCanSleep() { return !wifiBusy && !bleBusy.load() && !wifiPortal.isProvisioning(); }
+bool deviceInfoCanSleep() { return !wifiBusy && !bleBusy.load() && !wifiPortal.isProvisioning() && !wifiPortal.isConnecting(); }
 
 bool suspendDeviceInfo() {
     WiFi.setAutoReconnect(false);

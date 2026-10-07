@@ -1,9 +1,9 @@
 {
   "name": "PipBoy",
-  "version": "1.4",
-  "file": "PipBoy-v1.4.bin",
-  "bytes": 1429280,
-  "sha256": "3f8e7f71e892cd38df0910367b7b5e9a0d92c20b3ec6e863907871d86131bea3",
+  "version": "1.5",
+  "file": "PipBoy-v1.5.bin",
+  "bytes": 1430112,
+  "sha256": "490da8f2fa5d958a0396d741399961c16d3d848e00a25763011eeb28442985f4",
   "chip": "ESP32-S3",
   "flash_mb": 16,
   "psram_mb": 8,

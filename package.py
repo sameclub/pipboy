@@ -4,7 +4,7 @@ import hashlib
 import json
 import shutil
 
-VERSION = "1.4"
+VERSION = "1.5"
 root = Path(__file__).resolve().parent
 # The version lives in the firmware too; refuse to ship a mismatched name.
 if f"PIPBOY v{VERSION}" not in (root / "src/main.cpp").read_text(encoding="utf-8"):
